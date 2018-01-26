@@ -1,0 +1,3 @@
+[submodule "lib/rtm"]
+	path = lib/rtm
+	url = https://saucydragon@bitbucket.org/saucygames/rpg-io-rtm.git

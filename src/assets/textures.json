@@ -1,0 +1,28 @@
+{"frames": [
+
+{
+	"filename": "alric.png",
+	"frame": {"x":903,"y":1,"w":100,"h":156},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":156},
+	"sourceSize": {"w":100,"h":156}
+},
+{
+	"filename": "bg.png",
+	"frame": {"x":1,"y":1,"w":900,"h":719},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":900,"h":719},
+	"sourceSize": {"w":900,"h":719}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "textures.png",
+	"format": "RGBA8888",
+	"size": {"w":1004,"h":721},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:8b8eeb96b41ea39381f155b1ec3cb4e5:d0b998d76c0bbc8cb536ef7df4bda13b:cf827d152df04949dfee256cd0c8efd8$"
+}
+}
