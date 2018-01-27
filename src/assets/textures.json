@@ -2,31 +2,159 @@
 
 {
 	"filename": "bg.png",
-	"frame": {"x":1,"y":168,"w":600,"h":800},
+	"frame": {"x":1,"y":1,"w":1600,"h":1200},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":600,"h":800},
-	"sourceSize": {"w":600,"h":800}
+	"spriteSourceSize": {"x":0,"y":0,"w":1600,"h":1200},
+	"sourceSize": {"w":1600,"h":1200}
+},
+{
+	"filename": "Crystalsm.png",
+	"frame": {"x":1789,"y":1089,"w":92,"h":94},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":6,"w":92,"h":94},
+	"sourceSize": {"w":100,"h":100}
 },
 {
 	"filename": "elder.png",
-	"frame": {"x":384,"y":1,"w":126,"h":165},
+	"frame": {"x":1758,"y":534,"w":126,"h":165},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":126,"h":165},
 	"sourceSize": {"w":126,"h":165}
 },
 {
+	"filename": "fwurmssm.png",
+	"frame": {"x":1801,"y":190,"w":71,"h":91},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":0,"w":71,"h":91},
+	"sourceSize": {"w":100,"h":100}
+},
+{
+	"filename": "glyph_01.png",
+	"frame": {"x":1713,"y":894,"w":107,"h":104},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":27,"y":28,"w":107,"h":104},
+	"sourceSize": {"w":160,"h":160}
+},
+{
+	"filename": "glyph_02.png",
+	"frame": {"x":1754,"y":701,"w":116,"h":99},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":31,"w":116,"h":99},
+	"sourceSize": {"w":160,"h":160}
+},
+{
+	"filename": "glyph_03.png",
+	"frame": {"x":1603,"y":698,"w":149,"h":121},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":20,"w":149,"h":121},
+	"sourceSize": {"w":160,"h":160}
+},
+{
+	"filename": "glyph_04.png",
+	"frame": {"x":1754,"y":802,"w":114,"h":90},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":35,"w":114,"h":90},
+	"sourceSize": {"w":160,"h":160}
+},
+{
+	"filename": "glyph_05.png",
+	"frame": {"x":1603,"y":1049,"w":90,"h":114},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":23,"w":90,"h":114},
+	"sourceSize": {"w":160,"h":160}
+},
+{
 	"filename": "goober.png",
-	"frame": {"x":1,"y":1,"w":108,"h":88},
+	"frame": {"x":1603,"y":869,"w":108,"h":88},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":108,"h":88},
 	"sourceSize": {"w":108,"h":88}
 },
 {
+	"filename": "pigbunnysm.png",
+	"frame": {"x":1603,"y":959,"w":100,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":88},
+	"sourceSize": {"w":100,"h":100}
+},
+{
+	"filename": "plant01.png",
+	"frame": {"x":1801,"y":283,"w":30,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":100,"y":129,"w":30,"h":32},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "plant02.png",
+	"frame": {"x":1801,"y":131,"w":79,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":66,"y":104,"w":79,"h":57},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "plant04.png",
+	"frame": {"x":1603,"y":534,"w":153,"h":162},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":6,"w":153,"h":162},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "plant06.png",
+	"frame": {"x":1603,"y":333,"w":194,"h":199},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":1,"w":194,"h":199},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "plant07.png",
+	"frame": {"x":1603,"y":131,"w":196,"h":200},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":0,"w":196,"h":200},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "plant08.png",
+	"frame": {"x":1603,"y":821,"w":139,"h":46},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":33,"y":108,"w":139,"h":46},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "slugdogsm.png",
+	"frame": {"x":1789,"y":1000,"w":97,"h":87},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":13,"w":97,"h":87},
+	"sourceSize": {"w":100,"h":100}
+},
+{
+	"filename": "treessm.png",
+	"frame": {"x":1695,"y":1049,"w":92,"h":99},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":1,"w":92,"h":99},
+	"sourceSize": {"w":100,"h":100}
+},
+{
 	"filename": "wolf.png",
-	"frame": {"x":111,"y":1,"w":271,"h":128},
+	"frame": {"x":1603,"y":1,"w":271,"h":128},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":14,"y":86,"w":271,"h":128},
@@ -37,8 +165,8 @@
 	"version": "1.0",
 	"image": "textures.png",
 	"format": "RGBA8888",
-	"size": {"w":602,"h":969},
+	"size": {"w":1887,"h":1202},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:b2420cc87081da80e31d4e714bff3e2a:2d218f7c1b10fb7b9aefbf340a035a20:cf827d152df04949dfee256cd0c8efd8$"
+	"smartupdate": "$TexturePacker:SmartUpdate:ed1eeda1b70baca57985d2e987ffa68d:bf3fcbbd3b5322852108eb722031176b:cf827d152df04949dfee256cd0c8efd8$"
 }
 }

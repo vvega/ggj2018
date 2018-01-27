@@ -35,11 +35,13 @@ let debugMode = 1;
 			//Initialize stuff here
 			game.clock = new Clock();
 			game.clock.signal.add(function(b, m) { this.measure = m; this.beat = b; }, game.clock);
-			var musicManager = new MusicManager();
+			//var musicManager = new MusicManager();
 
 			game.map = game.add.existing(new GameMap(0,0));
-			game.testGoober = game.add.existing(new GreenGoober(130, 220));
+			game.testGoober = game.add.existing(new BaseGoober(130, 220));
 			game.elder = game.add.existing(new Elder(game.canvas.width/2, game.canvas.height - 75));
+
+			game.testGoober.alert();
 		},
 		update: function() {
 			//funny stuff with the game update loop here if you wanna
