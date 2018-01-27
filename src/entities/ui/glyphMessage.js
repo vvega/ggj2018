@@ -5,6 +5,7 @@ class GlyphMessage extends Phaser.Group {
         this.x = x;
         this.y = y;
         this.glyphIdx = 0;
+        this.glyphIDs = glyphArr.map(x => x.id);
         this.scale.setTo(.7);
     }
 
@@ -35,6 +36,8 @@ class GlyphMessage extends Phaser.Group {
         this.children.forEach((el) => {
             this.remove(el);
         })
+
+        this.glyphIDs = glyphArr.map(x => x.id);
 
         glyphArr.forEach((el, idx) => {
             el.y = this.y;

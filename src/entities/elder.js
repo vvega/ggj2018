@@ -5,8 +5,7 @@ class Elder extends Phaser.Sprite {
         this.anchor.setTo(.5);
         this.scale.setTo(.65);
         this.speed = 15;
-        this.targetGoober = game.testGoober;
-		this.lineOfSight = new Phaser.Line(x, y, this.targetGoober.x, this.targetGoober.y);
+		this.signal = new Phaser.Signal();
     }
 
 	move(point) {
@@ -17,8 +16,14 @@ class Elder extends Phaser.Sprite {
 		}
 	}
 
-	issueCommand() {
+	addTargetGoober(goober) {
+		this.targetGoober = goober;
+		this.lineOfSight = new Phaser.Line(this.x, this.y, this.targetGoober.x, this.targetGoober.y);
+	}
+
+	issueCommand(glyphMsg) {
 		//TODO: issue command to goober
+		this.signal.dispatch(glyphMsg);
 	}
 
 	stopMove() {

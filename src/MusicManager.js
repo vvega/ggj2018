@@ -58,7 +58,7 @@ class MusicManager {
 				break;				
 		}
 
-		if(measure % 8 == 0) {
+		if(measure % 4 == 0) {
 			// play a chord
 			randomElement(this.chords).play();
 		}
@@ -67,6 +67,5 @@ class MusicManager {
 
 function randomElement(ax) {
 	var e = Math.floor(Math.random()*ax.length);
-	console.log("random: " + e);
 	return ax[e];
 }
