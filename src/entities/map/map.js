@@ -1,8 +1,9 @@
 class GameMap extends Phaser.Image {
 	constructor() {
-		super(game, 0, 0, game.atlasName, "bg.png");
+		super(game, 0, 0);
+		this.bg = this.addChild(game.add.image(0, 0, game.atlasName, "bg.png"));
+		this.bg.scale.setTo(.5);
 		this._assignInputHandlers();
-		this.tint = 0x555555;
 		this.detailObjects = this._addMapDetail(10);
 	}
 

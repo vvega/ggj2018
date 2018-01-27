@@ -51,11 +51,14 @@ class MusicManager {
 				// play a synco beat
 				randomElement(this.syncoBeats).play()
 				break;
+<<<<<<< HEAD
 
 			case 3:
 				// play a minor beat
 				randomElement(this.minorBeats).play();
 				break;				
+=======
+>>>>>>> 08c5fed741c4b7901d4defd07ae3a7ca96fe90b9
 		}
 
 		if(measure % 8 == 0) {
