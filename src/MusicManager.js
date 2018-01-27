@@ -21,10 +21,15 @@ class MusicManager {
 		this.minorBeats[1] = game.add.audio('MinorBeat2');
 		this.minorBeats[2] = game.add.audio('MinorBeat3');
 		this.minorBeats[3] = game.add.audio('MinorBeat4');
+		this.minorBeats[4] = game.add.audio('MinorBeat5');
+		this.minorBeats[5] = game.add.audio('MinorBeat6');
 
 		this.syncoBeats = [];
 		this.syncoBeats[0] = game.add.audio('SyncoBeat1');
 		this.syncoBeats[1] = game.add.audio('SyncoBeat2');
+		this.syncoBeats[2] = game.add.audio('SyncoBeat3');
+		this.syncoBeats[3] = game.add.audio('SyncoBeat4');
+
 
 		this.wolfChord = game.add.audio('WolfChord');
 	} 
@@ -35,22 +40,22 @@ class MusicManager {
 				// play a major and minor beat
 				randomElement(this.bigBeats).play();
 				randomElement(this.minorBeats).play();
-			break;
+				break;
 
 			case 1:
 				// play a minor beat
 				randomElement(this.minorBeats).play();
-			break;
+				break;
 
 			case 2:
 				// play a synco beat
 				randomElement(this.syncoBeats).play()
-			break;
+				break;
 		}
 
 		if(measure % 8 == 0) {
 			// play a chord
-				randomElement(this.chords).play();
+			randomElement(this.chords).play();
 		}
 	}
 }

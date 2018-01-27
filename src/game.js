@@ -23,8 +23,12 @@ let debugMode = 1;
 			game.load.audio('MinorBeat2', ['./assets/sounds/music/MinorBeat2.ogg']);
 			game.load.audio('MinorBeat3', ['./assets/sounds/music/MinorBeat3.ogg']);
 			game.load.audio('MinorBeat4', ['./assets/sounds/music/MinorBeat4.ogg']);
+			game.load.audio('MinorBeat5', ['./assets/sounds/music/MinorBeat5.ogg']);
+			game.load.audio('MinorBeat6', ['./assets/sounds/music/MinorBeat6.ogg']);
 			game.load.audio('SyncoBeat1', ['./assets/sounds/music/SyncoBeat1.ogg']);
 			game.load.audio('SyncoBeat2', ['./assets/sounds/music/SyncoBeat2.ogg']);
+			game.load.audio('SyncoBeat3', ['./assets/sounds/music/SyncoBeat3.ogg']);
+			game.load.audio('SyncoBeat4', ['./assets/sounds/music/SyncoBeat4.ogg']);
 			game.load.audio('WolfChord', ['./assets/sounds/music/WolfChord.ogg']);
 		},
 		create: function() {
