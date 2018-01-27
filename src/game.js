@@ -13,12 +13,19 @@
 		},
 		create: function() {
 			//Initialize stuff here
-			game.bg = game.add.existing(new GameMap(0,0));
-			let goober = game.add.existing(new GreenGoober(game.canvas.width - 100, 0));
+			game.map = game.add.existing(new GameMap(0,0));
+			game.testGoober = game.add.existing(new GreenGoober(130, 220));
 			game.elder = game.add.existing(new Elder(game.canvas.width/2, game.canvas.height - 75));
 		},
 		update: function() {
 			//funny stuff with the game update loop here if you wanna
-		} 
+		},
+		render() {
+			game.debug.geom(game.elder.lineOfSight, game.elder.lineOfSight.obstructed ? 'rgba(255,0,0,1)' : 'rgba(0,255,0,1)');
+			/*game.map.detailObjects && game.map.detailObjects.forEach(function(el) {
+				game.debug.geom(el.boundingLine, 'rgba(255,255,0,1)');
+			});*/
+		}
+
 	});
 }(this))
