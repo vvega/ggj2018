@@ -12,11 +12,26 @@ let debugMode = 1;
 			//Asset loading here
 			game.atlasName = "gameAtlas";
 			game.load.atlas(game.atlasName, "./assets/textures.png",  "./assets/textures.json");
+			game.load.audio('BigBeat1', ['./assets/sounds/music/BigBeat1.ogg']);
+			game.load.audio('BigBeat2', ['./assets/sounds/music/BigBeat2.ogg']);
+			game.load.audio('BigBeat3', ['./assets/sounds/music/BigBeat3.ogg']);
+			game.load.audio('BigBeat4', ['./assets/sounds/music/BigBeat4.ogg']);
+			game.load.audio('Chord_C_Ab', ['./assets/sounds/music/Chord_C_Ab.ogg']);
+			game.load.audio('Chord_F_G', ['./assets/sounds/music/Chord_F_G.ogg']);
+			game.load.audio('Chord_G_Eb', ['./assets/sounds/music/Chord_G_Eb.ogg']);
+			game.load.audio('MinorBeat1', ['./assets/sounds/music/MinorBeat1.ogg']);
+			game.load.audio('MinorBeat2', ['./assets/sounds/music/MinorBeat2.ogg']);
+			game.load.audio('MinorBeat3', ['./assets/sounds/music/MinorBeat3.ogg']);
+			game.load.audio('MinorBeat4', ['./assets/sounds/music/MinorBeat4.ogg']);
+			game.load.audio('SyncoBeat1', ['./assets/sounds/music/SyncoBeat1.ogg']);
+			game.load.audio('SyncoBeat2', ['./assets/sounds/music/SyncoBeat2.ogg']);
+			game.load.audio('WolfChord', ['./assets/sounds/music/WolfChord.ogg']);
 		},
 		create: function() {
 			//Initialize stuff here
 			game.clock = new Clock();
 			game.clock.signal.add(function(b, m) { this.measure = m; this.beat = b; }, game.clock);
+			var musicManager = new MusicManager();
 
 			game.map = game.add.existing(new GameMap(0,0));
 			game.testGoober = game.add.existing(new GreenGoober(130, 220));
