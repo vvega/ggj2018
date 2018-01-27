@@ -290,6 +290,71 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">raw/plant06dust.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>22,15,44,30</rect>
+                <key>scale9Paddings</key>
+                <rect>22,15,44,30</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/plant07dust.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>24,17,47,34</rect>
+                <key>scale9Paddings</key>
+                <rect>24,17,47,34</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/vines01.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>13,22,25,45</rect>
+                <key>scale9Paddings</key>
+                <rect>13,22,25,45</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/vines02.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>34,57,69,114</rect>
+                <key>scale9Paddings</key>
+                <rect>34,57,69,114</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/vines03.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>44,74,88,148</rect>
+                <key>scale9Paddings</key>
+                <rect>44,74,88,148</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">raw/wolf.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
