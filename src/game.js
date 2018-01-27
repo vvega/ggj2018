@@ -41,7 +41,7 @@ let debugMode = 1;
 			game.map = game.add.existing(new GameMap(0,0));
 			game.testGoober = game.add.existing(new BaseGoober(130, 220));
 			game.elder = game.add.existing(new Elder(game.canvas.width/2, game.canvas.height - 75));
-
+			game.ui = game.add.existing(new GameUI(0, 0));
 			game.testGoober.alert();
 		},
 		update: function() {
