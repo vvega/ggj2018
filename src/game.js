@@ -13,12 +13,11 @@
 		},
 		create: function() {
 			//Initialize stuff here
-			game.add.sprite(400, 300, game.atlasName, "alric.png");
+			let goober = game.add.existing(new GreenGoober());
+			let elder = game.add.existing(new Elder());
 		},
 		update: function() {
 			//funny stuff with the game update loop here if you wanna
 		} 
 	});
-
-
 }(this))
