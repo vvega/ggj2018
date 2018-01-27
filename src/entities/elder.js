@@ -16,11 +16,6 @@ class Elder extends Phaser.Sprite {
 		}
 	}
 
-	addTargetGoober(goober) {
-		this.targetGoober = goober;
-		this.lineOfSight = new Phaser.Line(this.x, this.y, this.targetGoober.x, this.targetGoober.y);
-	}
-
 	issueCommand(glyphMsg) {
 		//TODO: issue command to goober
 		this.signal.dispatch(glyphMsg);
@@ -38,8 +33,6 @@ class Elder extends Phaser.Sprite {
 		if(!this.targetGoober) {
 			return;
 		}
-
-		this._updateLineOfSight();
 	}
 
 	_checkWithinBounds() {
@@ -50,11 +43,6 @@ class Elder extends Phaser.Sprite {
 		if(this.x < this.width) {
 			this.movingLeft = false;
 		}
-	}
-
-	_updateLineOfSight() {
-		this.lineOfSight.setTo(this.x, this.y, this.targetGoober.x, this.targetGoober.y);
-		this.lineOfSight.obstructed = game.map.detailObjects.filter((entity) => Phaser.Line.intersectsRectangle(this.lineOfSight, entity)).length > 0;
 	}
 
 	_handleMoving() {

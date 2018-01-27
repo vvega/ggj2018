@@ -1,6 +1,7 @@
 class Glyph extends Phaser.Image {
-    constructor(x, y) {
-        var id = Math.ceil(Math.random()*5);
+    constructor(x, y, id = -1) {
+        id = id < 0 ? Math.ceil(Math.random()*5) : id;
+        console.log("created glyph with id " + id);
         super(game, x, y, game.atlasName, `glyph_0${id}.png`);
         this.id = id;
         this.orig = {

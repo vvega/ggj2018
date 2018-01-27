@@ -43,7 +43,7 @@ let debugMode = 1;
 			game.elder = game.add.existing(new Elder(game.canvas.width/2, game.canvas.height - 75));
 			
 			game.testGoober = game.add.existing(new GreenGoober(130, 220));
-			game.elder.addTargetGoober(game.testGoober);
+			
 			game.testGoober.alert();
 		},
 		update: function() {
@@ -51,7 +51,7 @@ let debugMode = 1;
 		},
 		render() {
 			game.debug.text(game.clock.measure + ":" + game.clock.beat, 32, 96, "fuchsia");
-			game.debug.geom(game.elder.lineOfSight, game.elder.lineOfSight.obstructed ? 'rgba(255,0,0,1)' : 'rgba(0,255,0,1)');
+			game.debug.geom(game.testGoober.lineOfSight, game.testGoober.lineOfSight.obstructed ? 'rgba(255,0,0,1)' : 'rgba(0,255,0,1)');
 			game.map.detailObjects && game.map.detailObjects.forEach(function(el) {
 				game.debug.geom(el.boundingLine, 'rgba(255,255,0,1)');
 			});

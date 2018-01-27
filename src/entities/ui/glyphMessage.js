@@ -20,7 +20,9 @@ class GlyphMessage extends Phaser.Group {
                 return;
             }
 
-            this.children[b].show();
+            if(!this.parent.lineOfSight.obstructed) {
+                this.children[b].show();
+            }
         });
     }
 

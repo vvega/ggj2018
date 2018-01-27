@@ -19,6 +19,7 @@ class GreenGoober extends BaseGoober {
 	}
 
     update() {
+    	super.update();
     	this._checkWithinBounds();
     	if (this.moving) this.x += this.speed;
     }

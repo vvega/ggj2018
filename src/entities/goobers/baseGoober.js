@@ -7,16 +7,27 @@ class BaseGoober extends Phaser.Sprite {
         this.message = this.addChild(new GlyphMessage(-115, -80));
 
         game.elder.signal.add(this._handleSpell, this);
+
+        this.lineOfSight = new Phaser.Line(this.x, this.y, this.game.elder.x, this.game.elder.y);
     }
 
     alert(glyphArr) {
-        this.message.startShowSequence([new Glyph(0, 0),
-                                        new Glyph(0, 0),
-                                        new Glyph(0, 0)]);
+        this.message.startShowSequence([new Glyph(0, 0, 1),
+                                        new Glyph(0, 0, 2),
+                                        new Glyph(0, 0, 3)]);
+    }
+
+    update() {
+        this._updateLineOfSight();
     }
 
     stopAlert() {
         this.message.hide();
+    }
+
+    _updateLineOfSight() {
+        this.lineOfSight.setTo(this.x, this.y, game.elder.x, game.elder.y);
+        this.lineOfSight.obstructed = game.map.detailObjects.filter((entity) => Phaser.Line.intersectsRectangle(this.lineOfSight, entity)).length > 0;
     }
 
     _handleSpell(glyphMsg) {
