@@ -17,8 +17,9 @@ class Elder extends Phaser.Sprite {
 		}
 	}
 
-	issueCommand() {
+	issueCommand(glyphMessage) {
 		//TODO: issue command to goober
+		console.log("issuing command")
 	}
 
 	stopMove() {

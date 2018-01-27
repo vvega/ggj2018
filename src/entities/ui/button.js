@@ -9,7 +9,21 @@ class Button extends Phaser.Image {
 		this.inputEnabled = true;
 
 		this.glyphMessage = this.addChild(glyphMessage);
-		this.glyphMessage.position.setTo(25, -60);
+		this.glyphMessage.position.setTo(25, -65);
 		this.glyphMessage.showAll();
+
+		this._setupInput();
+	}
+
+	_setupInput() {
+		this.events.onInputDown.add(() => {
+			this.loadTexture(game.atlasName, this.downTexture);
+			this.glyphMessage.y += 5;
+			game.elder.issueCommand(this.glyphMessage);
+		});
+		this.events.onInputUp.add(() => {
+			this.loadTexture(game.atlasName, this.upTexture);
+			this.glyphMessage.y -= 5;
+		});
 	}
 }
