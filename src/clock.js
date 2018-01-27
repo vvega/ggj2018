@@ -1,7 +1,7 @@
 class Clock {
 	constructor() {
 		this.beatLength = 300; // in ms
-		this.measureLength = 3; // in beats
+		this.measureLength = 4; // in beats
 		this.beat = 0;
 		this.measure = 0;
 		this.signal = new Phaser.Signal();
