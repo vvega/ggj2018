@@ -3,6 +3,7 @@ class Elder extends Phaser.Sprite {
     constructor(x, y) {
         super(game, x, y, game.atlasName, "elder.png");
         this.anchor.setTo(.5);
+        this.scale.setTo(.65);
         this.speed = 15;
         this.targetGoober = game.testGoober;
 		this.lineOfSight = new Phaser.Line(x, y, this.targetGoober.x, this.targetGoober.y);
@@ -48,7 +49,7 @@ class Elder extends Phaser.Sprite {
 
 	_updateLineOfSight() {
 		this.lineOfSight.setTo(this.x, this.y, this.targetGoober.x, this.targetGoober.y);
-		this.lineOfSight.obstructed = game.map.children.filter((entity) => Phaser.Line.intersectsRectangle(this.lineOfSight, entity)).length > 0;
+		this.lineOfSight.obstructed = game.map.detailObjects.filter((entity) => Phaser.Line.intersectsRectangle(this.lineOfSight, entity)).length > 0;
 	}
 
 	_handleMoving() {
