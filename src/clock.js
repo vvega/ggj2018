@@ -16,8 +16,6 @@ class Clock {
 			++this.measure;
 			this.beat = 0;
 		}
-		this.signal.dispatch(this.measure, this.beat);
+		this.signal.dispatch(this.beat, this.measure);
 	}
-
-
 }
