@@ -3,7 +3,7 @@ class Elder extends Phaser.Sprite {
     constructor(x, y) {
         super(game, x, y, game.atlasName, "elder.png");
         this.anchor.setTo(.5);
-        this.scale.setTo(.65);
+        this.scale.setTo(.6);
         this.speed = 15;
 		this.signal = new Phaser.Signal();
     }
@@ -17,7 +17,6 @@ class Elder extends Phaser.Sprite {
 	}
 
 	issueCommand(glyphMsg) {
-		//TODO: issue command to goober
 		this.signal.dispatch(glyphMsg);
 	}
 
