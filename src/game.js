@@ -1,5 +1,7 @@
 "use strict";
 
+let debugMode = 1;
+
 (function($) {
 	console.log("hello world!")
 	//experimental use of Satori for multiplayer if needed
@@ -15,6 +17,8 @@
 			//Initialize stuff here
 			let goober = game.add.existing(new GreenGoober());
 			let elder = game.add.existing(new Elder());
+			let clock = new Clock();
+			clock.signal.add((m, b)=>{game.debug.text(m + ":" + b, 32, 96, "fuchsia");});
 		},
 		update: function() {
 			//funny stuff with the game update loop here if you wanna
