@@ -1,28 +1,44 @@
 {"frames": [
 
 {
-	"filename": "alric.png",
-	"frame": {"x":903,"y":1,"w":100,"h":156},
+	"filename": "bg.png",
+	"frame": {"x":1,"y":168,"w":600,"h":800},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":156},
-	"sourceSize": {"w":100,"h":156}
+	"spriteSourceSize": {"x":0,"y":0,"w":600,"h":800},
+	"sourceSize": {"w":600,"h":800}
 },
 {
-	"filename": "bg.png",
-	"frame": {"x":1,"y":1,"w":900,"h":719},
+	"filename": "elder.png",
+	"frame": {"x":384,"y":1,"w":126,"h":165},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":900,"h":719},
-	"sourceSize": {"w":900,"h":719}
+	"spriteSourceSize": {"x":0,"y":0,"w":126,"h":165},
+	"sourceSize": {"w":126,"h":165}
+},
+{
+	"filename": "goober.png",
+	"frame": {"x":1,"y":1,"w":108,"h":88},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":108,"h":88},
+	"sourceSize": {"w":108,"h":88}
+},
+{
+	"filename": "wolf.png",
+	"frame": {"x":111,"y":1,"w":271,"h":128},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":86,"w":271,"h":128},
+	"sourceSize": {"w":300,"h":300}
 }],
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "textures.png",
 	"format": "RGBA8888",
-	"size": {"w":1004,"h":721},
+	"size": {"w":602,"h":969},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:8b8eeb96b41ea39381f155b1ec3cb4e5:d0b998d76c0bbc8cb536ef7df4bda13b:cf827d152df04949dfee256cd0c8efd8$"
+	"smartupdate": "$TexturePacker:SmartUpdate:b2420cc87081da80e31d4e714bff3e2a:2d218f7c1b10fb7b9aefbf340a035a20:cf827d152df04949dfee256cd0c8efd8$"
 }
 }

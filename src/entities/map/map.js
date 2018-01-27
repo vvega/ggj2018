@@ -20,7 +20,7 @@ class GameMap extends Phaser.Image {
 		let detailObjects = [];
 		let spacing = game.canvas.width/(maxItems - 2);
 		for(let i = 0; i < maxItems; i++) {
-			detailObjects.push(this.addChild(game.add.existing(new MapDetailObject(i * spacing, 300, "alric.png"))));
+			detailObjects.push(this.addChild(game.add.existing(new MapDetailObject(i * spacing, 300, "goober.png"))));
 		}
 
 		return detailObjects;

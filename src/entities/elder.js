@@ -1,7 +1,7 @@
 class Elder extends Phaser.Sprite {
 
     constructor(x, y) {
-        super(game, x, y, game.atlasName, "alric.png");
+        super(game, x, y, game.atlasName, "elder.png");
         this.anchor.setTo(.5);
         this.speed = 15;
         this.targetGoober = game.testGoober;
