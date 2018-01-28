@@ -7,7 +7,7 @@ class GameMap extends Phaser.Image {
 		this.movingChoices = [PigBunny, SlugDog];
 		this.staticChoices = [Tree, Vines, Pit];
 		this.instantChoices = [Fwurm];
-		this.detailObjects = [];//this.addMapDetail(10);
+		this.detailObjects = [];
 	}
 
 	_assignInputHandlers() {

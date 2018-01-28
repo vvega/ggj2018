@@ -33,7 +33,7 @@ class PlayState extends Phaser.State {
 
 		game.testWolf = game.add.existing(new Wolf(100, 100, game.testGoober));
 		
-		game.map.addMapObstructions(2, 3, 1);
+		game.map.addMapObstructions(1, 1, 1);
 
 		game.ui = game.add.existing(new GameUI(0, 0));
 
