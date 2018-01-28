@@ -20,8 +20,9 @@ class Wolf extends Phaser.Sprite {
 
 	update() {
 
-		if(/*!this.targetGoober.alive*/ false) {
-			// run off
+		if(!this.targetGoober.vulnerable) {
+			// run off, nothing to eat...
+			console.log("Wolf is done hunting");
 		} else {
 			this._handleMoving();
 		}

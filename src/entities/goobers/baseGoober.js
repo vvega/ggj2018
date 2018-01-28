@@ -5,12 +5,12 @@ class BaseGoober extends Phaser.Sprite {
         this.scale.setTo(.8);
         this.vulnerable = true;
         //XXX
-       /* if(game.gooberMessages.length) {
-            this.message = this.addChild(game.gooberMessages[0]);
-            game.gooberMessages.shift();
-        } else {*/
+        if(game.gooberMessages.length) {
+            this.message = this.addChild(game.gooberMessages.shift());
+            ;
+        } else {
             this.message = this.addChild(game.glyphMessageGen.getNewGlyphMessage());
-       // }
+        }
         
         this.message.position.setTo(-120, -140)
 
