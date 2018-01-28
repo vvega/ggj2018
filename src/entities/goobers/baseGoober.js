@@ -1,6 +1,11 @@
 class BaseGoober extends Phaser.Sprite {
     constructor(x, y, texture = "goober.png") {
         super(game, x, y, game.atlasName, texture);
+        this.states = {
+            IDLE: 1,
+            FLEEING: 2
+        };
+
         this.anchor.setTo(.5, 1);
         this.scale.setTo(.8);
         this.vulnerable = true;

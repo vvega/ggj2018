@@ -14,12 +14,6 @@ class RedGoober extends BaseGoober {
     	//logic for easing/bobbing on beats or whatever?
     }
 
-	_checkWithinBounds() {
-		if(this.x > game.canvas.width - this.width || this.x < this.width) {
-			this.speed *= -1;
-		}
-	}
-
     update() {
         this.rangeCircle.x = this.x;
         this.rangeCircle.y = this.y;
