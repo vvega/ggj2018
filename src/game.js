@@ -31,12 +31,21 @@ let debugMode = 1;
 			game.load.audio('SyncoBeat3', ['./assets/sounds/music/SyncoBeat3.ogg']);
 			game.load.audio('SyncoBeat4', ['./assets/sounds/music/SyncoBeat4.ogg']);
 			game.load.audio('WolfChord', ['./assets/sounds/music/WolfChord.ogg']);
+			game.load.audio('g1', ['./assets/sounds/speech/glyphshort1.ogg']);
+			game.load.audio('g2', ['./assets/sounds/speech/glyphshort2.ogg']);
+			game.load.audio('g3', ['./assets/sounds/speech/glyphshort3.ogg']);
+			game.load.audio('g4', ['./assets/sounds/speech/glyphshort4.ogg']);
+			game.load.audio('g5', ['./assets/sounds/speech/glyphshort5.ogg']);
+			game.load.audio('e1', ['./assets/sounds/speech/eldersolo1.ogg']);
+			game.load.audio('e2', ['./assets/sounds/speech/eldersolo2.ogg']);
+			game.load.audio('e3', ['./assets/sounds/speech/eldersolo3.ogg']);
+			game.load.audio('e4', ['./assets/sounds/speech/eldersolo4.ogg']);
 		},
 		create: function() {
 			//Initialize stuff here
 			game.clock = new Clock();
 			game.clock.signal.add(function(b, m) { this.measure = m; this.beat = b; }, game.clock);
-			var musicManager = new MusicManager();
+			game.musicManager = new MusicManager();
 
 			game.rsignal = new Phaser.Signal();
 

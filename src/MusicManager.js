@@ -30,8 +30,22 @@ class MusicManager {
 		this.syncoBeats[2] = game.add.audio('SyncoBeat3');
 		this.syncoBeats[3] = game.add.audio('SyncoBeat4');
 
-
 		this.wolfChord = game.add.audio('WolfChord');
+
+		this.glyphChatter = [];
+		this.glyphChatter[0] = game.add.audio('g1');
+		this.glyphChatter[1] = game.add.audio('g2');
+		this.glyphChatter[2] = game.add.audio('g3');
+		this.glyphChatter[3] = game.add.audio('g4');
+		this.glyphChatter[4] = game.add.audio('g5');
+
+		this.glyphChatter.forEach((x) => {x.volume = 0.25});
+
+		this.elderChatter = [];
+		this.elderChatter[0] = game.add.audio('e1');
+		this.elderChatter[1] = game.add.audio('e2');
+		this.elderChatter[2] = game.add.audio('e3');
+		this.elderChatter[3] = game.add.audio('e4');
 	} 
 
 	HandleBeats(beat, measure) {
@@ -58,14 +72,15 @@ class MusicManager {
 				break;				
 		}
 
-		if(measure % 4 == 0) {
+		if(measure % 16 == 2 && beat == 0) {
 			// play a chord
 			randomElement(this.chords).play();
 		}
 	}
 }
 
-function randomElement(ax) {
+function randomElement(ax, debug=false) {
 	var e = Math.floor(Math.random()*ax.length);
+	if(debug) console.log("element: " + e);
 	return ax[e];
 }

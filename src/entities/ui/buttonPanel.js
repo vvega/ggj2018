@@ -9,7 +9,7 @@ class ButtonPanel extends Phaser.Image {
 
 		this.openSlots = [];
 
-		game.rsignal.add(this._onRescue, this);
+		//game.rsignal.add(this._onRescue, this);
 
 		this._buildHand();
 	}

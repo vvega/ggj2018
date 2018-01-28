@@ -22,6 +22,7 @@ class GlyphMessage extends Phaser.Group {
 
             if(!this.parent.lineOfSight.obstructed) {
                 this.children[b].show();
+                game.musicManager.glyphChatter[this.children[b].id].play();
             }
         });
     }
