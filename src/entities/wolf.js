@@ -7,6 +7,7 @@ class Wolf extends Phaser.Sprite {
         this.speed = 1;
         this.targetGoober = goober;
         this.combatRadius = this.scale.x * this.width/2;
+        game.time.events.loop(Phaser.Timer.SECOND * 3, this._slowUpdate, this);
     }
 
     _targetVector() {
@@ -33,6 +34,13 @@ class Wolf extends Phaser.Sprite {
 		}
 	}
 
+	_slowUpdate() {
+		if(!this.targetGoober) {
+			this.targetGoober = this._getNextGoober();
+			if (this.targetGoober) console.log("Wolf has resumed hunting");
+		}
+	}
+
 	_checkWithinBounds() {
 		if(this.x > game.canvas.width - this.width) {
 			this.movingRight = false;
@@ -54,5 +62,10 @@ class Wolf extends Phaser.Sprite {
 	_eatGoober() {
 		this.targetGoober.die();
 		this.targetGoober = undefined;
+	}
+
+	_getNextGoober() {
+		let goober = game.goobers.shift();
+		return goober;
 	}
 }
