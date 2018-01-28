@@ -446,6 +446,80 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">raw/animations/wolf/idle/wolfidle_01.png</key>
+            <key type="filename">raw/animations/wolf/idle/wolfidle_02.png</key>
+            <key type="filename">raw/animations/wolf/idle/wolfidle_03.png</key>
+            <key type="filename">raw/animations/wolf/idle/wolfidle_04.png</key>
+            <key type="filename">raw/animations/wolf/idle/wolfidle_05.png</key>
+            <key type="filename">raw/animations/wolf/idle/wolfidle_06.png</key>
+            <key type="filename">raw/animations/wolf/idle/wolfidle_07.png</key>
+            <key type="filename">raw/animations/wolf/idle/wolfidle_08.png</key>
+            <key type="filename">raw/animations/wolf/idle/wolfidle_09.png</key>
+            <key type="filename">raw/animations/wolf/idle/wolfidle_10.png</key>
+            <key type="filename">raw/animations/wolf/wolfidle_0001.png</key>
+            <key type="filename">raw/animations/wolf/wolfidle_0002.png</key>
+            <key type="filename">raw/animations/wolf/wolfidle_0003.png</key>
+            <key type="filename">raw/animations/wolf/wolfidle_0004.png</key>
+            <key type="filename">raw/animations/wolf/wolfidle_0005.png</key>
+            <key type="filename">raw/animations/wolf/wolfidle_0006.png</key>
+            <key type="filename">raw/animations/wolf/wolfidle_0007.png</key>
+            <key type="filename">raw/animations/wolf/wolfidle_0008.png</key>
+            <key type="filename">raw/animations/wolf/wolfidle_0009.png</key>
+            <key type="filename">raw/animations/wolf/wolfidle_0010.png</key>
+            <key type="filename">raw/animations/wolf/wolfrevert_0001.png</key>
+            <key type="filename">raw/animations/wolf/wolfrevert_0002.png</key>
+            <key type="filename">raw/animations/wolf/wolfrevert_0003.png</key>
+            <key type="filename">raw/animations/wolf/wolfrevert_0004.png</key>
+            <key type="filename">raw/animations/wolf/wolfrevert_0005.png</key>
+            <key type="filename">raw/animations/wolf/wolftransform_0001.png</key>
+            <key type="filename">raw/animations/wolf/wolftransform_0002.png</key>
+            <key type="filename">raw/animations/wolf/wolftransform_0003.png</key>
+            <key type="filename">raw/animations/wolf/wolftransform_0004.png</key>
+            <key type="filename">raw/animations/wolf/wolftransform_0005.png</key>
+            <key type="filename">raw/animations/wolf/wolftransform_0006.png</key>
+            <key type="filename">raw/animations/wolf/wolfwalk_0001.png</key>
+            <key type="filename">raw/animations/wolf/wolfwalk_0002.png</key>
+            <key type="filename">raw/animations/wolf/wolfwalk_0003.png</key>
+            <key type="filename">raw/animations/wolf/wolfwalk_0004.png</key>
+            <key type="filename">raw/animations/wolf2/idle/wolfidle_01.png</key>
+            <key type="filename">raw/animations/wolf2/idle/wolfidle_02.png</key>
+            <key type="filename">raw/animations/wolf2/idle/wolfidle_03.png</key>
+            <key type="filename">raw/animations/wolf2/idle/wolfidle_04.png</key>
+            <key type="filename">raw/animations/wolf2/idle/wolfidle_05.png</key>
+            <key type="filename">raw/animations/wolf2/idle/wolfidle_06.png</key>
+            <key type="filename">raw/animations/wolf2/idle/wolfidle_07.png</key>
+            <key type="filename">raw/animations/wolf2/idle/wolfidle_08.png</key>
+            <key type="filename">raw/animations/wolf2/idle/wolfidle_09.png</key>
+            <key type="filename">raw/animations/wolf2/idle/wolfidle_10.png</key>
+            <key type="filename">raw/animations/wolf2/revert/wolfrevert_01.png</key>
+            <key type="filename">raw/animations/wolf2/revert/wolfrevert_02.png</key>
+            <key type="filename">raw/animations/wolf2/revert/wolfrevert_03.png</key>
+            <key type="filename">raw/animations/wolf2/revert/wolfrevert_04.png</key>
+            <key type="filename">raw/animations/wolf2/revert/wolfrevert_05.png</key>
+            <key type="filename">raw/animations/wolf2/transform/wolftransform_01.png</key>
+            <key type="filename">raw/animations/wolf2/transform/wolftransform_02.png</key>
+            <key type="filename">raw/animations/wolf2/transform/wolftransform_03.png</key>
+            <key type="filename">raw/animations/wolf2/transform/wolftransform_04.png</key>
+            <key type="filename">raw/animations/wolf2/transform/wolftransform_05.png</key>
+            <key type="filename">raw/animations/wolf2/transform/wolftransform_06.png</key>
+            <key type="filename">raw/animations/wolf2/walk/wolfwalk_01.png</key>
+            <key type="filename">raw/animations/wolf2/walk/wolfwalk_02.png</key>
+            <key type="filename">raw/animations/wolf2/walk/wolfwalk_03.png</key>
+            <key type="filename">raw/animations/wolf2/walk/wolfwalk_04.png</key>
+            <key type="filename">raw/wolf.png</key>
+            <key type="filename">raw/wolf_hiding.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>75,75,150,150</rect>
+                <key>scale9Paddings</key>
+                <rect>75,75,150,150</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">raw/bg.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -504,6 +578,8 @@
                 <false/>
             </struct>
             <key type="filename">raw/goober.png</key>
+            <key type="filename">raw/goober_green.png</key>
+            <key type="filename">raw/goober_red.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -636,20 +712,6 @@
                 <rect>200,150,400,300</rect>
                 <key>scale9Paddings</key>
                 <rect>200,150,400,300</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">raw/wolf.png</key>
-            <key type="filename">raw/wolf_hiding.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>75,75,150,150</rect>
-                <key>scale9Paddings</key>
-                <rect>75,75,150,150</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
