@@ -1,7 +1,7 @@
 class BaseGoober extends Phaser.Sprite {
     constructor(x, y, texture = "goober.png") {
         super(game, x, y, game.atlasName, texture);
-        this.anchor.setTo(.5);
+        this.anchor.setTo(.5, 1);
         this.scale.setTo(.8);
         this.vulnerable = true;
         //XXX
@@ -12,7 +12,7 @@ class BaseGoober extends Phaser.Sprite {
             this.message = this.addChild(game.glyphMessageGen.getNewGlyphMessage());
         }
         
-        this.message.position.setTo(-120, -140)
+        this.message.position.setTo(-120, -175)
 
         game.elder.signal.add(this._handleSpell, this);
 
@@ -61,7 +61,7 @@ class BaseGoober extends Phaser.Sprite {
         console.log("Goober rescued");
         this.vulnerable = false;
         this.moving = false;
-        let rescueTween = game.add.tween(this).to({ y: this.y - 50, alpha: 0}, 800, Phaser.Easing.Linear.InOut);
+        let rescueTween = game.add.tween(this).to({ y: this.y - 150, alpha: 0}, 800, Phaser.Easing.Linear.InOut);
         rescueTween.onComplete.add(this.kill, this);
         rescueTween.start();
 
