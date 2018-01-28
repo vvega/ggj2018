@@ -13,7 +13,11 @@ class ButtonPanel extends Phaser.Image {
 	_buildHand(glyphMessages) {
 		//TODO: Generate hand here
 		let spacing = this.width * .37;
-		for(let i = 0; i < 5; i++) {
+		let g123 = new GlyphMessage(0, 0, [new Glyph(0, 0, 1),
+				                           new Glyph(0, 0, 2),
+				                           new Glyph(0, 0, 3)]);
+		this.buttons.push(this.addChild(new Button(60, 65, g123)));
+		for(let i = 1; i < 5; i++) {
 			let glyphMessage = new GlyphMessage(0, 0, [new Glyph(0, 0),
 				                                       new Glyph(0, 0),
 				                                       new Glyph(0, 0)]);

@@ -37,8 +37,12 @@ class BaseGoober extends Phaser.Sprite {
             console.log("GlyphMessage lengths not equal, which should never happen (ignoring)");
         }
         for(var i = 0; i < glyphMsg.glyphIDs.length; i++) {
-            if (this.message.glyphIDs[i] != glyphMsg.glyphIDs.length) {
+            var mine = this.message.glyphIDs[i];
+            var yours = glyphMsg.glyphIDs[i];
+            if (mine != yours) {
                 // wrong spell, nothing happens
+                console.log("Spell wasted:" + glyphMsg.glyphIDs);
+                return 0;
             }
         }
         // if we're here, we got the right spell and are rescued
