@@ -22,6 +22,7 @@ class ButtonPanel extends Phaser.Image {
 		let spacing = this.width * .37;
 		let glyphMessage;
 		for(let i = 0; i < 5; i++) {
+			//XXX
 			/*if(game.gooberMessages.length) {
 	            glyphMessage = game.panelMessages[0];
 	            game.gooberMessages.shift();
