@@ -1,7 +1,7 @@
 class RedGoober extends BaseGoober {
     constructor(x, y) {
         super(x, y, "goober.png");
-        this.tint = 0xff0000;
+        this.tint = 0xffa5a5;
         this.speed = 3;
         this.moving = true;
         this.range = 130;

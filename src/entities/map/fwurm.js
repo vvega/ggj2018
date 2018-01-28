@@ -17,6 +17,6 @@ class Fwurm extends MapDetailObject {
 		this.boundingLineWidth = this.width/3;
 		this.anim.onComplete.add(() => {
 			this.boundingLineWidth = 0;
-		})
+		});
 	}
 }
