@@ -3,18 +3,24 @@ class BaseGoober extends Phaser.Sprite {
         super(game, x, y, game.atlasName, texture);
         this.anchor.setTo(.5);
         this.scale.setTo(.8);
+        this.vulnerable = true;
 
-        this.message = this.addChild(new GlyphMessage(-115, -80));
+       /* if(game.gooberMessages.length) {
+            this.message = this.addChild(game.gooberMessages[0]);
+            game.gooberMessages.shift();
+        } else {*/
+            this.message = this.addChild(game.glyphMessageGen.getNewGlyphMessage());
+       // }
+        
+        this.message.position.setTo(-120, -140)
 
         game.elder.signal.add(this._handleSpell, this);
 
         this.lineOfSight = new Phaser.Line(this.x, this.y, this.game.elder.x, this.game.elder.y);
     }
 
-    alert(glyphArr) {
-        this.message.startShowSequence([new Glyph(0, 0, 1),
-                                        new Glyph(0, 0, 2),
-                                        new Glyph(0, 0, 3)]);
+    alert() {
+        this.message.startShowSequence();
     }
 
     update() {
@@ -53,7 +59,12 @@ class BaseGoober extends Phaser.Sprite {
         // give a new spell card to the Elder
         // animate rescue
         console.log("Goober rescued");
+        this.vulnerable = false;
+        this.moving = false;
+        let rescueTween = game.add.tween(this).to({ y: this.y - 50, alpha: 0}, 800, Phaser.Easing.Linear.InOut);
+        rescueTween.onComplete.add(this.kill, this);
+        rescueTween.start();
 
-        //game.signal.dispatch("rescued");
+        game.rsignal.dispatch("rescued");
     }
 }
