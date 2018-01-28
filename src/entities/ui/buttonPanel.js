@@ -13,6 +13,10 @@ class ButtonPanel extends Phaser.Image {
 		game.buttonDropped = new Phaser.Signal();
 		game.buttonDropped.add((button) => {
 			this.openSlots.push(button);
+			if(this.openSlots.length === this.buttons.length) {
+				//no more buttons available, LOST
+				game.state.start("end");
+			}
 		}, this);
 
 		this._buildHand();
@@ -23,12 +27,11 @@ class ButtonPanel extends Phaser.Image {
 		let glyphMessage;
 		for(let i = 0; i < 5; i++) {
 			//XXX
-			/*if(game.gooberMessages.length) {
-	            glyphMessage = game.panelMessages[0];
-	            game.gooberMessages.shift();
-	        } else {*/
+			if(game.panelMessages.length) {
+	            glyphMessage = game.panelMessages.shift();
+	        } else {
 	            glyphMessage = game.glyphMessageGen.getNewGlyphMessage();
-	        /*}*/
+	        }
 
 			this.buttons.push(this.addChild(new Button((spacing * i) + 60, 65, glyphMessage)));
 		}
@@ -36,14 +39,9 @@ class ButtonPanel extends Phaser.Image {
 
 	_onRescue(msg) {
 		if(msg=="rescued") {
-			console.log(this, "rescu")
 			let newCard = this.openSlots.pop();
-			newCard.resurface(game.glyphMessageGen.getNewGlyphMessage());
+			newCard && newCard.resurface(game.glyphMessageGen.getNewGlyphMessage());
 			console.log("resurfacing", newCard);
 		}
-	}
-
-	replaceInHand(button, glyphMessage) {
-		
 	}
 }

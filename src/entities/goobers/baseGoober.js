@@ -1,18 +1,23 @@
 class BaseGoober extends Phaser.Sprite {
     constructor(x, y, texture = "goober.png") {
         super(game, x, y, game.atlasName, texture);
-        this.anchor.setTo(.5);
+        this.states = {
+            IDLE: 1,
+            FLEEING: 2
+        };
+
+        this.anchor.setTo(.5, 1);
         this.scale.setTo(.8);
         this.vulnerable = true;
         //XXX
-       /* if(game.gooberMessages.length) {
-            this.message = this.addChild(game.gooberMessages[0]);
-            game.gooberMessages.shift();
-        } else {*/
+        if(game.gooberMessages.length) {
+            this.message = this.addChild(game.gooberMessages.shift());
+            ;
+        } else {
             this.message = this.addChild(game.glyphMessageGen.getNewGlyphMessage());
-       // }
+        }
         
-        this.message.position.setTo(-120, -140)
+        this.message.position.setTo(-120, -175)
 
         game.elder.signal.add(this._handleSpell, this);
 
@@ -41,7 +46,14 @@ class BaseGoober extends Phaser.Sprite {
         if (this.message.glyphIDs.length != glyphMsg.glyphIDs.length) {
             // this should never happen
             console.log("GlyphMessage lengths not equal, which should never happen (ignoring)");
+            return;
         }
+
+        if(!this.alive) {
+            console.log("I'm dead/rescued already, dont care");
+            return;
+        }
+
         for(var i = 0; i < glyphMsg.glyphIDs.length; i++) {
             var mine = this.message.glyphIDs[i];
             var yours = glyphMsg.glyphIDs[i];
@@ -61,10 +73,23 @@ class BaseGoober extends Phaser.Sprite {
         console.log("Goober rescued");
         this.vulnerable = false;
         this.moving = false;
-        let rescueTween = game.add.tween(this).to({ y: this.y - 50, alpha: 0}, 800, Phaser.Easing.Linear.InOut);
+        let rescueTween = game.add.tween(this).to({ y: this.y - 150, alpha: 0}, 800, Phaser.Easing.Linear.InOut);
         rescueTween.onComplete.add(this.kill, this);
         rescueTween.start();
+        this.message.destroy();
+        game.numRescued++;
+        game.rsignal.dispatch("rescued", this);
+    }
 
-        game.rsignal.dispatch("rescued");
+    die() {
+        this.vulnerable = false;
+        this.moving = false;
+        let deathTween = game.add.tween(this).to({alpha: 0}, 500, "Linear");
+        deathTween.onComplete.add(() => {
+            this.kill();
+            this.message.destroy();
+            game.numDead++;
+        });
+        deathTween.start();
     }
 }

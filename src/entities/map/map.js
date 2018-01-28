@@ -4,7 +4,10 @@ class GameMap extends Phaser.Image {
 		this.bg = this.addChild(game.add.image(0, 0, game.atlasName, "bg.png"));
 		this.bg.scale.setTo(.5);
 		this._assignInputHandlers();
-		this.detailObjects = this._addMapDetail(10);
+		this.movingChoices = [PigBunny, SlugDog];
+		this.staticChoices = [Tree, Vines, Pit];
+		this.instantChoices = [Fwurm];
+		this.detailObjects = [];//this.addMapDetail(10);
 	}
 
 	_assignInputHandlers() {
@@ -17,13 +20,21 @@ class GameMap extends Phaser.Image {
 		});
 	}
 
-	_addMapDetail(maxItems) {
-		let detailObjects = [];
-		let spacing = game.canvas.width/(maxItems - 2);
-		for(let i = 0; i < maxItems; i++) {
-			detailObjects.push(this.addChild(game.add.existing(new MapDetailObject(i * spacing, 300, "goober.png"))));
+	addMapObstructions(maxStatic, maxMoving, maxInstant) {
+		let choiceIdx;
+		for(let i = 0; i < maxStatic; i++) {
+			choiceIdx = Math.floor(Math.random()*this.staticChoices.length);
+			this.detailObjects.push(game.add.existing(new this.staticChoices[choiceIdx](Math.random()*game.canvas.width, 200 + Math.random()*150)));
 		}
 
-		return detailObjects;
+		for(let i = 0; i < maxMoving; i++) {
+			choiceIdx = Math.floor(Math.random()*this.movingChoices.length);
+			this.detailObjects.push(game.add.existing(new this.movingChoices[choiceIdx](Math.random()*game.canvas.width, 200 + Math.random()*150)));
+		}
+
+		for(let i = 0; i < maxInstant; i++) {
+			choiceIdx = Math.floor(Math.random()*this.instantChoices.length);
+			this.detailObjects.push(game.add.existing(new this.instantChoices[choiceIdx](Math.random()*game.canvas.width, 200 + Math.random()*150)));
+		}
 	}
 }

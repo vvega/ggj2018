@@ -90,9 +90,9 @@
         <key>maxTextureSize</key>
         <QSize>
             <key>width</key>
-            <int>2048</int>
+            <int>4096</int>
             <key>height</key>
-            <int>2048</int>
+            <int>4096</int>
         </QSize>
         <key>fixedTextureSize</key>
         <QSize>
@@ -216,6 +216,35 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">raw/Crystalsmbare.png</key>
+            <key type="filename">raw/Crystalsmdetailed.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>45,46,90,93</rect>
+                <key>scale9Paddings</key>
+                <rect>45,46,90,93</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/animations/decorativebutterflies/butterfly01.png</key>
+            <key type="filename">raw/animations/decorativebutterflies/butterfly02.png</key>
+            <key type="filename">raw/animations/decorativebutterflies/butterfly03.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>36,30,72,60</rect>
+                <key>scale9Paddings</key>
+                <rect>36,30,72,60</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">raw/animations/fwurms/fwurms01.png</key>
             <key type="filename">raw/animations/fwurms/fwurms02.png</key>
             <key type="filename">raw/animations/fwurms/fwurms03.png</key>
@@ -237,6 +266,128 @@
                 <rect>39,45,79,91</rect>
                 <key>scale9Paddings</key>
                 <rect>39,45,79,91</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/animations/gooberanims/gooberidle_0001.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberidle_0002.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberidle_0003.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberidle_0004.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberidle_0005.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberidle_0006.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberidle_0007.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberidle_0008.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberidle_0009.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberidle_0010.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberidle_0011.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberidle_0012.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberidle_0013.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrun_0001.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrun_0002.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrun_0003.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrun_0004.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrun_0005.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrun_0006.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrun_0007.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrun_0008.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrun_0009.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrun_0010.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrun_0011.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrun_0012.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrun_0013.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrunend_0001.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrunend_0002.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrunend_0003.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrunstart_0001.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrunstart_0002.png</key>
+            <key type="filename">raw/animations/gooberanims/gooberrunstart_0003.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>27,28,54,55</rect>
+                <key>scale9Paddings</key>
+                <rect>27,28,54,55</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/animations/pigbunny/pigbunny01.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>50,43,99,87</rect>
+                <key>scale9Paddings</key>
+                <rect>50,43,99,87</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/animations/pigbunny/pigbunny02.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>49,40,99,81</rect>
+                <key>scale9Paddings</key>
+                <rect>49,40,99,81</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/animations/pigbunny/pigbunny03.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>54,46,108,91</rect>
+                <key>scale9Paddings</key>
+                <rect>54,46,108,91</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/animations/pigbunny/pigbunny04.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>54,44,108,87</rect>
+                <key>scale9Paddings</key>
+                <rect>54,44,108,87</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/animations/pigbunny/pigbunny05.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>52,50,104,100</rect>
+                <key>scale9Paddings</key>
+                <rect>52,50,104,100</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/animations/pigbunny/pigbunny06.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>50,40,100,81</rect>
+                <key>scale9Paddings</key>
+                <rect>50,40,100,81</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -365,6 +516,19 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">raw/icon_signal.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>19,19,38,38</rect>
+                <key>scale9Paddings</key>
+                <rect>19,19,38,38</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">raw/plant01.png</key>
             <key type="filename">raw/plant02.png</key>
             <key type="filename">raw/plant04.png</key>
@@ -448,7 +612,35 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">raw/spikepit.png</key>
+            <key type="filename">raw/spikepitbloody.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>47,15,94,30</rect>
+                <key>scale9Paddings</key>
+                <rect>47,15,94,30</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/title.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>200,150,400,300</rect>
+                <key>scale9Paddings</key>
+                <rect>200,150,400,300</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">raw/wolf.png</key>
+            <key type="filename">raw/wolf_hiding.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>

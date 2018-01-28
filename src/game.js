@@ -43,6 +43,7 @@ let debugMode = 1;
 		},
 		create: function() {
 			//Initialize stuff here
+			game.state.add("end", new EndState());
 			game.clock = new Clock();
 			game.clock.signal.add(function(b, m) { this.measure = m; this.beat = b; }, game.clock);
 
@@ -52,14 +53,34 @@ let debugMode = 1;
 			game.rsignal = new Phaser.Signal();
 
 			game.map = game.add.existing(new GameMap(0,0));
-			[game.panelMessages, game.gooberMessages] = game.glyphMessageGen.generateInitialGlyphMessages();
+			[game.panelMessages, game.gooberMessages] =[[],[]]// game.glyphMessageGen.generateInitialGlyphMessages();
 			game.elder = game.add.existing(new Elder(game.canvas.width/2, game.canvas.height - 155));
 			game.testGoober = game.add.existing(new GreenGoober(130, 220));
+
+			//TODO: populate goobers via spawn 
+			game.goobers = [game.testGoober,
+							game.add.existing(new RedGoober(130, 280)),
+						    game.add.existing(new GreenGoober(160, 190)),
+						    game.add.existing(new GreenGoober(200, 310)),
+						    game.add.existing(new RedGoober(430, 280))];
+
 			game.testWolf = game.add.existing(new Wolf(100, 100, game.testGoober));
 			
-			game.ui = game.add.existing(new GameUI(0, 0));
+			game.map.addMapObstructions(2, 3, 1);
 
-			game.testGoober.alert();
+			game.ui = game.add.existing(new GameUI(0, 0));
+			game.numDead = 0;
+			game.numRescued = 0;
+
+			game.time.events.loop(Phaser.Timer.SECOND/3, () => {
+				game.world.sort("y", Phaser.Group.SORT_ASCENDING);
+			}, this);
+
+			game.endGame = () => {
+				$.elderPosition = game.elder.position;
+				this.state.start("end");
+			};
+
 		},
 		update: function() {
 			//funny stuff with the game update loop here if you wanna
@@ -67,9 +88,9 @@ let debugMode = 1;
 		render() {
 			game.debug.text(game.clock.measure + ":" + game.clock.beat, 32, 96, "fuchsia");
 			game.testGoober.alive && game.debug.geom(game.testGoober.lineOfSight, game.testGoober.lineOfSight.obstructed ? 'rgba(255,0,0,1)' : 'rgba(0,255,0,1)');
-			game.map.detailObjects && game.map.detailObjects.forEach(function(el) {
+			/*game.map.detailObjects && game.map.detailObjects.forEach(function(el) {
 				game.debug.geom(el.boundingLine, 'rgba(255,255,0,1)');
-			});
+			});*/
 		}
 
 	});
