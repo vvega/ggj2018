@@ -10,11 +10,15 @@ class MusicManager {
 		this.bigBeats[1] = game.add.audio('BigBeat2');
 		this.bigBeats[2] = game.add.audio('BigBeat3');
 		this.bigBeats[3] = game.add.audio('BigBeat4');
+		
+		this.bigBeats.forEach((x) => {x.volume = 1.0});
 
 		this.chords = [];
 		this.chords[0] = game.add.audio('Chord_C_Ab');
 		this.chords[1] = game.add.audio('Chord_F_G');
 		this.chords[2] = game.add.audio('Chord_G_Eb');
+		
+		this.chords.forEach((x) => {x.volume = 1.0});
 
 		this.minorBeats = [];
 		this.minorBeats[0] = game.add.audio('MinorBeat1');
@@ -23,14 +27,20 @@ class MusicManager {
 		this.minorBeats[3] = game.add.audio('MinorBeat4');
 		this.minorBeats[4] = game.add.audio('MinorBeat5');
 		this.minorBeats[5] = game.add.audio('MinorBeat6');
-
+		
+		this.minorBeats.forEach((x) => {x.volume = 1.0});
+		
 		this.syncoBeats = [];
 		this.syncoBeats[0] = game.add.audio('SyncoBeat1');
 		this.syncoBeats[1] = game.add.audio('SyncoBeat2');
 		this.syncoBeats[2] = game.add.audio('SyncoBeat3');
 		this.syncoBeats[3] = game.add.audio('SyncoBeat4');
 
+		this.syncoBeats.forEach((x) => {x.volume = 1.0});
+
 		this.wolfChord = game.add.audio('WolfChord');
+		
+		this.wolfChord.forEach((x) => {x.volume = 1.0});
 
 		this.glyphChatter = [];
 		this.glyphChatter[0] = game.add.audio('g1');
@@ -46,6 +56,9 @@ class MusicManager {
 		this.elderChatter[1] = game.add.audio('e2');
 		this.elderChatter[2] = game.add.audio('e3');
 		this.elderChatter[3] = game.add.audio('e4');
+		
+		this.elderChatter.forEach((x) => {x.volume = 1.0});
+		
 	} 
 
 	HandleBeats(beat, measure) {
