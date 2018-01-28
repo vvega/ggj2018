@@ -40,6 +40,7 @@ class Button extends Phaser.Image {
 	}
 
 	resurface(newGlyphMessage) {
+		this.glyphMessage.hideAll();
 		if(this.moveTween.isRunning) {
 			//Pop back up if successful rescue
 			game.tweens.remove(this.moveTween);
