@@ -25,11 +25,11 @@ class PlayState extends Phaser.State {
 		game.testGoober = game.add.existing(new GreenGoober(130, 220));
 
 		//TODO: populate goobers via spawn 
-		game.goobers = [game.testGoober,
+		game.goobers = []/*game.testGoober,
 						game.add.existing(new RedGoober(130, 280)),
 					    game.add.existing(new GreenGoober(160, 190)),
 					    game.add.existing(new GreenGoober(200, 310)),
-					    game.add.existing(new RedGoober(430, 280))];
+					    game.add.existing(new RedGoober(430, 280))];*/
 
 		game.testWolf = game.add.existing(new Wolf(100, 100, game.testGoober));
 		
@@ -60,8 +60,8 @@ class PlayState extends Phaser.State {
 
 	_slowUpdate() {
 		if (game.goobers.length < game.maxGoobers) {
-			let spawnx = randomElement([130, 160, 200, 430]);
-			let spawny = randomElement([100, 190, 280, 310]);
+			let spawnx = randomElement([170, 160, 200, 430]);
+			let spawny = randomElement([100, 190, 380, 410]);
 			if(Math.random() <= 0.5) {
 				let g = game.add.existing(new RedGoober(spawnx, spawny));
 				game.goobers.push(g);

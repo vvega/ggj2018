@@ -4,7 +4,7 @@ class Pit extends MapDetailObject {
         this.anchor.setTo(.5, .8);
         let scale =  Math.random()*.5 + .8;
         this.anchor.setTo(scale, 0);
-        this.combatRadius = this.scale.x * this.width/2;
+        this.combatRadius = this.width/4;
 	}
 
 	update() {
