@@ -20,9 +20,11 @@ class GlyphMessage extends Phaser.Group {
                 return;
             }
 
-            if(!this.parent.lineOfSight.obstructed) {
+            if(this.parent.lineOfSight && !this.parent.lineOfSight.obstructed) {
                 this.children[b].show();
-                game.musicManager.glyphChatter[this.children[b].id].play();
+                if(game.musicManager.glyphChatter[this.children[b].id]) {
+                    game.musicManager.glyphChatter[this.children[b].id].play();
+                }
             }
         });
     }
