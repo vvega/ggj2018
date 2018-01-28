@@ -13,6 +13,10 @@ class ButtonPanel extends Phaser.Image {
 		game.buttonDropped = new Phaser.Signal();
 		game.buttonDropped.add((button) => {
 			this.openSlots.push(button);
+			if(this.openSlots.length === this.buttons.length) {
+				//no more buttons available, LOST
+				game.state.start("end");
+			}
 		}, this);
 
 		this._buildHand();

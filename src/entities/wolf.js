@@ -28,7 +28,7 @@ class Wolf extends Phaser.Sprite {
 		}
 
 		if(this._targetVector()[2] < this.combatRadius) {
-			this._eatGoober();
+			this._eatGoober(this.targetGoober);
 		}
 	}
 
@@ -51,6 +51,7 @@ class Wolf extends Phaser.Sprite {
 	}
 
 	_eatGoober() {
-		console.log("oh noes, goober eaten");
+		this.targetGoober.die();
+		this.targetGoober = undefined;
 	}
 }

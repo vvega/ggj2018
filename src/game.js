@@ -43,6 +43,7 @@ let debugMode = 1;
 		},
 		create: function() {
 			//Initialize stuff here
+			game.state.add("end", new EndState());
 			game.clock = new Clock();
 			game.clock.signal.add(function(b, m) { this.measure = m; this.beat = b; }, game.clock);
 
@@ -60,6 +61,12 @@ let debugMode = 1;
 			game.ui = game.add.existing(new GameUI(0, 0));
 
 			game.testGoober.alert();
+
+			game.endGame = () => {
+				$.elderPosition = game.elder.position;
+				this.state.start("end");
+			};
+
 		},
 		update: function() {
 			//funny stuff with the game update loop here if you wanna
