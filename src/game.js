@@ -52,6 +52,7 @@ let debugMode = 1;
 			game.map = game.add.existing(new GameMap(0,0));
 			game.elder = game.add.existing(new Elder(game.canvas.width/2, game.canvas.height - 155));
 			game.testGoober = game.add.existing(new GreenGoober(130, 220));
+			game.testWolf = game.add.existing(new Wolf(100, 100, game.testGoober));
 			
 			game.ui = game.add.existing(new GameUI(0, 0));
 
