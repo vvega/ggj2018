@@ -75,6 +75,8 @@ class BaseGoober extends Phaser.Sprite {
     }
 
     die() {
+        this.vulnerable = false;
+        this.moving = false;
         let deathTween = game.add.tween(this).to({alpha: 0}, 500, "Linear");
         deathTween.onComplete.add(() => {
             this.kill();

@@ -58,9 +58,11 @@ let debugMode = 1;
 			game.testGoober = game.add.existing(new GreenGoober(130, 220));
 
 			//TODO: populate goobers via spawn 
-			game.goobers = [game.add.existing(new RedGoober(130, 280)),
-						    game.add.existing(new GreenGoober(160, 100)),
-						    game.add.existing(new BaseGoober(200, 100))];
+			game.goobers = [game.testGoober,
+							game.add.existing(new RedGoober(130, 280)),
+						    game.add.existing(new GreenGoober(160, 190)),
+						    game.add.existing(new BaseGoober(200, 310)),
+						    game.add.existing(new RedGoober(430, 280))];
 
 			game.testWolf = game.add.existing(new Wolf(100, 100, game.testGoober));
 			
