@@ -12,9 +12,7 @@ class RedGoober extends BaseGoober {
 
     _handleRhythm(beat, measure) {
     	//logic for easing/bobbing on beats or whatever?
-    }
-
-    update() {
+        if(beat > 0) return;
         this.rangeCircle.x = this.x;
         this.rangeCircle.y = this.y;
         switch(this.state) {
@@ -27,6 +25,10 @@ class RedGoober extends BaseGoober {
                 break;
 
         }
+    }
+
+    update() {
+    
     }
 
     _pickAPoint() {

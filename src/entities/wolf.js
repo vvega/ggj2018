@@ -23,7 +23,7 @@ class Wolf extends Phaser.Sprite {
 
 		if(!this.targetGoober || !this.targetGoober.vulnerable) {
 			// run off, nothing to eat...
-			console.log("Wolf is done hunting");
+			
 			return;
 		} else {
 			this._handleMoving();
@@ -35,9 +35,15 @@ class Wolf extends Phaser.Sprite {
 	}
 
 	_slowUpdate() {
-		if(!this.targetGoober) {
+		if(!this.targetGoober || !this.targetGoober.vulnerable) {
 			this.targetGoober = this._getNextGoober();
-			if (this.targetGoober) console.log("Wolf has resumed hunting");
+			if (this.targetGoober) {
+				if(this.targetGoober.vulnerable) {
+					console.log("Wolf has resumed hunting");
+				}
+				else console.log("Wolf found a non-eligible goober, waiting");
+			}
+			else console.log("Wolf could not find target, waiting");
 		}
 	}
 
@@ -62,6 +68,7 @@ class Wolf extends Phaser.Sprite {
 	_eatGoober() {
 		this.targetGoober.die();
 		this.targetGoober = undefined;
+		console.log("Wolf ate goober");
 	}
 
 	_getNextGoober() {
