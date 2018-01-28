@@ -22,6 +22,8 @@ class BaseGoober extends Phaser.Sprite {
         game.elder.signal.add(this._handleSpell, this);
 
         this.lineOfSight = new Phaser.Line(this.x, this.y, this.game.elder.x, this.game.elder.y);
+
+        this.alert();
     }
 
     alert() {
