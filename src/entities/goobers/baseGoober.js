@@ -16,6 +16,11 @@ class BaseGoober extends Phaser.Sprite {
         } else {
             this.message = this.addChild(game.glyphMessageGen.getNewGlyphMessage());
         }
+
+        this.idleAnim = this.animations.add("idle", Phaser.Animation.generateFrameNames('animations/gooberanims2/idle/gooberidle_', 1, 13, ".png", 2));
+        this.walkAnim = this.animations.add("walk", Phaser.Animation.generateFrameNames('animations/gooberanims2/run/gooberrun_', 2, 12, ".png", 2));
+        this.preIdleAnim = this.animations.add("preIdle", Phaser.Animation.generateFrameNames('animations/gooberanims2/runend/gooberrunend_', 1, 3, ".png", 2));
+        this.preWalkAnim = this.animations.add("preWalk", Phaser.Animation.generateFrameNames('animations/gooberanims2/runstart/gooberrunstart_', 1, 3, ".png", 2));
         
         this.message.position.setTo(-120, -175)
 
@@ -24,6 +29,8 @@ class BaseGoober extends Phaser.Sprite {
         this.lineOfSight = new Phaser.Line(this.x, this.y, this.game.elder.x, this.game.elder.y);
 
         this.alert();
+
+        this.idleAnim.play(24, true);
     }
 
     alert() {

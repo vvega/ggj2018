@@ -1,10 +1,10 @@
 class GreenGoober extends BaseGoober {
     constructor(x, y) {
         super(x, y, "goober.png");
-        this.tint = 0x00ff00;
+        this.tint = 0xa5ffc3;
         this.speed = 3;
         this.moving = true;
-
+        this.walkAnim.play(24, true);
         game.clock.signal.add(this._handleRhythm, this);
     }
 

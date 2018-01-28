@@ -301,6 +301,37 @@
             <key type="filename">raw/animations/gooberanims/gooberrunstart_0001.png</key>
             <key type="filename">raw/animations/gooberanims/gooberrunstart_0002.png</key>
             <key type="filename">raw/animations/gooberanims/gooberrunstart_0003.png</key>
+            <key type="filename">raw/animations/gooberanims2/idle/gooberidle_01.png</key>
+            <key type="filename">raw/animations/gooberanims2/idle/gooberidle_02.png</key>
+            <key type="filename">raw/animations/gooberanims2/idle/gooberidle_03.png</key>
+            <key type="filename">raw/animations/gooberanims2/idle/gooberidle_04.png</key>
+            <key type="filename">raw/animations/gooberanims2/idle/gooberidle_05.png</key>
+            <key type="filename">raw/animations/gooberanims2/idle/gooberidle_06.png</key>
+            <key type="filename">raw/animations/gooberanims2/idle/gooberidle_07.png</key>
+            <key type="filename">raw/animations/gooberanims2/idle/gooberidle_08.png</key>
+            <key type="filename">raw/animations/gooberanims2/idle/gooberidle_09.png</key>
+            <key type="filename">raw/animations/gooberanims2/idle/gooberidle_10.png</key>
+            <key type="filename">raw/animations/gooberanims2/idle/gooberidle_11.png</key>
+            <key type="filename">raw/animations/gooberanims2/idle/gooberidle_12.png</key>
+            <key type="filename">raw/animations/gooberanims2/idle/gooberidle_13.png</key>
+            <key type="filename">raw/animations/gooberanims2/run/gooberrun_02.png</key>
+            <key type="filename">raw/animations/gooberanims2/run/gooberrun_03.png</key>
+            <key type="filename">raw/animations/gooberanims2/run/gooberrun_04.png</key>
+            <key type="filename">raw/animations/gooberanims2/run/gooberrun_05.png</key>
+            <key type="filename">raw/animations/gooberanims2/run/gooberrun_06.png</key>
+            <key type="filename">raw/animations/gooberanims2/run/gooberrun_07.png</key>
+            <key type="filename">raw/animations/gooberanims2/run/gooberrun_08.png</key>
+            <key type="filename">raw/animations/gooberanims2/run/gooberrun_09.png</key>
+            <key type="filename">raw/animations/gooberanims2/run/gooberrun_10.png</key>
+            <key type="filename">raw/animations/gooberanims2/run/gooberrun_11.png</key>
+            <key type="filename">raw/animations/gooberanims2/run/gooberrun_12.png</key>
+            <key type="filename">raw/animations/gooberanims2/run/gooberrun_13.png</key>
+            <key type="filename">raw/animations/gooberanims2/runend/gooberrunend_01.png</key>
+            <key type="filename">raw/animations/gooberanims2/runend/gooberrunend_02.png</key>
+            <key type="filename">raw/animations/gooberanims2/runend/gooberrunend_03.png</key>
+            <key type="filename">raw/animations/gooberanims2/runstart/gooberrunstart_01.png</key>
+            <key type="filename">raw/animations/gooberanims2/runstart/gooberrunstart_02.png</key>
+            <key type="filename">raw/animations/gooberanims2/runstart/gooberrunstart_03.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>

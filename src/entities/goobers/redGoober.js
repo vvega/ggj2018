@@ -50,8 +50,12 @@ class RedGoober extends BaseGoober {
         let moveTween = game.add.tween(this).to({ x: destination.x, y: destination.y },
                                                 this.speed * Phaser.Point.distance(this, destination),
                                                 "Linear", false, Math.random() * Phaser.Timer.SECOND * 1);
-        moveTween.onComplete.add(() => this.destination = undefined);
+        moveTween.onComplete.add(() => {
+            this.destination = undefined;
+            this.preIdleAnim.play(24);
+        }, this);
         moveTween.start();
+        this.walkAnim.play(24, true);
 
         return destination;
     }
