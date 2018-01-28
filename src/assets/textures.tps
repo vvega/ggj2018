@@ -216,6 +216,85 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">raw/animations/fwurms/fwurms01.png</key>
+            <key type="filename">raw/animations/fwurms/fwurms02.png</key>
+            <key type="filename">raw/animations/fwurms/fwurms03.png</key>
+            <key type="filename">raw/animations/fwurms/fwurms04.png</key>
+            <key type="filename">raw/animations/fwurms/fwurms05.png</key>
+            <key type="filename">raw/animations/fwurms/fwurms06.png</key>
+            <key type="filename">raw/animations/fwurms/fwurms07.png</key>
+            <key type="filename">raw/animations/fwurms/fwurms08.png</key>
+            <key type="filename">raw/animations/fwurms/fwurms09.png</key>
+            <key type="filename">raw/animations/fwurms/fwurms10.png</key>
+            <key type="filename">raw/animations/fwurms/fwurms11.png</key>
+            <key type="filename">raw/animations/fwurms/fwurms12.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>39,45,79,91</rect>
+                <key>scale9Paddings</key>
+                <rect>39,45,79,91</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/animations/slugdog/slugdogwalk00.png</key>
+            <key type="filename">raw/animations/slugdog/slugdogwalk01.png</key>
+            <key type="filename">raw/animations/slugdog/slugdogwalk02.png</key>
+            <key type="filename">raw/animations/slugdog/slugdogwalk03.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>48,42,96,85</rect>
+                <key>scale9Paddings</key>
+                <rect>48,42,96,85</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/animations/vines/vines01.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>13,22,25,45</rect>
+                <key>scale9Paddings</key>
+                <rect>13,22,25,45</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/animations/vines/vines02.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>34,57,69,114</rect>
+                <key>scale9Paddings</key>
+                <rect>34,57,69,114</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/animations/vines/vines03.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>44,74,88,148</rect>
+                <key>scale9Paddings</key>
+                <rect>44,74,88,148</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">raw/bg.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -226,6 +305,20 @@
                 <rect>225,180,450,360</rect>
                 <key>scale9Paddings</key>
                 <rect>225,180,450,360</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">raw/button_glyph.png</key>
+            <key type="filename">raw/button_glyphdown.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>75,37,150,74</rect>
+                <key>scale9Paddings</key>
+                <rect>75,37,150,74</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -316,42 +409,42 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">raw/vines01.png</key>
+            <key type="filename">raw/shelf.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>13,22,25,45</rect>
+                <rect>400,35,800,70</rect>
                 <key>scale9Paddings</key>
-                <rect>13,22,25,45</rect>
+                <rect>400,35,800,70</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">raw/vines02.png</key>
+            <key type="filename">raw/shelfglow.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>34,57,69,114</rect>
+                <rect>400,63,800,125</rect>
                 <key>scale9Paddings</key>
-                <rect>34,57,69,114</rect>
+                <rect>400,63,800,125</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">raw/vines03.png</key>
+            <key type="filename">raw/sparkle.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>44,74,88,148</rect>
+                <rect>9,10,18,19</rect>
                 <key>scale9Paddings</key>
-                <rect>44,74,88,148</rect>
+                <rect>9,10,18,19</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
