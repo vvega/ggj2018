@@ -40,7 +40,7 @@ class MusicManager {
 
 		this.wolfChord = game.add.audio('WolfChord');
 		
-		this.wolfChord.forEach((x) => {x.volume = 1.0});
+		this.wolfChord.volume = 1.0;
 
 		this.glyphChatter = [];
 		this.glyphChatter[0] = game.add.audio('g1');
