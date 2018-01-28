@@ -53,14 +53,20 @@ let debugMode = 1;
 			game.rsignal = new Phaser.Signal();
 
 			game.map = game.add.existing(new GameMap(0,0));
-			[game.panelMessages, game.gooberMessages] = game.glyphMessageGen.generateInitialGlyphMessages();
+			[game.panelMessages, game.gooberMessages] =[[],[]]// game.glyphMessageGen.generateInitialGlyphMessages();
 			game.elder = game.add.existing(new Elder(game.canvas.width/2, game.canvas.height - 155));
 			game.testGoober = game.add.existing(new GreenGoober(130, 220));
 			game.testWolf = game.add.existing(new Wolf(100, 100, game.testGoober));
 			
+			game.map.addMapObstructions(2, 3, 1);
+
 			game.ui = game.add.existing(new GameUI(0, 0));
 
 			game.testGoober.alert();
+
+			game.time.events.loop(Phaser.Timer.SECOND/3, () => {
+				game.world.sort("y", Phaser.Group.SORT_ASCENDING);
+			}, this);
 
 			game.endGame = () => {
 				$.elderPosition = game.elder.position;
@@ -74,9 +80,9 @@ let debugMode = 1;
 		render() {
 			game.debug.text(game.clock.measure + ":" + game.clock.beat, 32, 96, "fuchsia");
 			game.testGoober.alive && game.debug.geom(game.testGoober.lineOfSight, game.testGoober.lineOfSight.obstructed ? 'rgba(255,0,0,1)' : 'rgba(0,255,0,1)');
-			game.map.detailObjects && game.map.detailObjects.forEach(function(el) {
+			/*game.map.detailObjects && game.map.detailObjects.forEach(function(el) {
 				game.debug.geom(el.boundingLine, 'rgba(255,255,0,1)');
-			});
+			});*/
 		}
 
 	});
