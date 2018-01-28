@@ -91,6 +91,8 @@ class BaseGoober extends Phaser.Sprite {
             this.kill();
             this.message.destroy();
             game.numDead++;
+
+            (game.numDead >= game.maxDead) && game.state.start("end");
         });
         deathTween.start();
     }
