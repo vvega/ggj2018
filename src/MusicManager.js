@@ -39,7 +39,7 @@ class MusicManager {
 		this.glyphChatter[3] = game.add.audio('g4');
 		this.glyphChatter[4] = game.add.audio('g5');
 
-		this.glyphChatter.forEach((x) => {x.volume = 0.25});
+		this.glyphChatter.forEach((x) => {x.volume = 1.0});
 
 		this.elderChatter = [];
 		this.elderChatter[0] = game.add.audio('e1');
