@@ -19,9 +19,10 @@ class Button extends Phaser.Image {
 		this.events.onInputDown.add(() => {
 			this.loadTexture(game.atlasName, this.downTexture);
 			this.glyphMessage.y += 5;
-			game.elder.issueCommand(this.glyphMessage);
 		});
 		this.events.onInputUp.add(() => {
+			game.elder.issueCommand(this.glyphMessage);
+			randomElement(game.musicManager.elderChatter).play();
 			this.loadTexture(game.atlasName, this.upTexture);
 			this.glyphMessage.y -= 5;
 		});

@@ -54,6 +54,6 @@ class BaseGoober extends Phaser.Sprite {
         // animate rescue
         console.log("Goober rescued");
 
-        game.signal.dispatch("rescued");
+        //game.signal.dispatch("rescued");
     }
 }
