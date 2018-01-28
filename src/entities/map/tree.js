@@ -1,7 +1,7 @@
 class Tree extends MapDetailObject {
 	constructor(x, y) {
 		super(x, y, 'treessm.png');
-        this.anchor.setTo(.5, .8);
+        this.anchor.setTo(.5, .7);
         this.scale.setTo(Math.random()*.7 + .8)
 	}
 

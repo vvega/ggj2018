@@ -64,6 +64,7 @@ class BaseGoober extends Phaser.Sprite {
         let rescueTween = game.add.tween(this).to({ y: this.y - 150, alpha: 0}, 800, Phaser.Easing.Linear.InOut);
         rescueTween.onComplete.add(this.kill, this);
         rescueTween.start();
+        this.message.destroy();
 
         game.rsignal.dispatch("rescued");
     }
