@@ -38,6 +38,8 @@ let debugMode = 1;
 			game.clock.signal.add(function(b, m) { this.measure = m; this.beat = b; }, game.clock);
 			var musicManager = new MusicManager();
 
+			game.rsignal = new Phaser.Signal();
+
 			game.map = game.add.existing(new GameMap(0,0));
 			game.elder = game.add.existing(new Elder(game.canvas.width/2, game.canvas.height - 155));
 			game.testGoober = game.add.existing(new GreenGoober(130, 220));

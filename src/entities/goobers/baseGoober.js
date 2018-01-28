@@ -53,5 +53,7 @@ class BaseGoober extends Phaser.Sprite {
         // give a new spell card to the Elder
         // animate rescue
         console.log("Goober rescued");
+
+        game.signal.dispatch("rescued");
     }
 }
