@@ -51,22 +51,8 @@ class Elder extends Phaser.Sprite {
 	}
 
 	update() {
-		if(game.state.getCurrentState() instanceof EndState) {
-			this.selectedIndicator.visible = false;
-			return;
-		}
 		this._checkWithinBounds();
 		this._handleMoving();
-
-		if(!this.targetGoober || !this.targetGoober.vulnerable) {
-			this.selectedIndicator.visible = false;
-			this.targetGoober = this._getNextGoober();
-		} 
-
-		if(this.targetGoober) {
-			this.selectedIndicator.visible = true;
-			this.selectedIndicator.position.setTo(this.targetGoober.x, this.targetGoober.y - 10);
-		}
 	}
 
 	_getNextGoober() {
