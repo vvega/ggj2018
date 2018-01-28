@@ -8,6 +8,8 @@ class PlayState extends Phaser.State {
 		game.numRescued = 0;
 		game.maxDead = 5;
 
+		game.maxGoobers = 5;
+
 		game.state.add("end", new EndState());
 		game.clock = new Clock();
 		game.clock.signal.add(function(b, m) { this.measure = m; this.beat = b; }, game.clock);
@@ -39,6 +41,8 @@ class PlayState extends Phaser.State {
 			game.world.sort("y", Phaser.Group.SORT_ASCENDING);
 		}, this);
 
+		game.time.events.loop(Phaser.Timer.SECOND * 3, this._slowUpdate, this);
+
 		game.endGame = () => {
 			$.elderPosition = game.elder.position;
 			this.state.start("end");
@@ -52,5 +56,23 @@ class PlayState extends Phaser.State {
 		/*game.map.detailObjects && game.map.detailObjects.forEach(function(el) {
 			game.debug.geom(el.boundingLine, 'rgba(255,255,0,1)');
 		});*/
+	}
+
+	_slowUpdate() {
+		if (game.goobers.length < game.maxGoobers) {
+			let spawnx = randomElement([130, 160, 200, 430]);
+			let spawny = randomElement([100, 190, 280, 310]);
+			if(Math.random() <= 0.5) {
+				let g = game.add.existing(new RedGoober(spawnx, spawny));
+				game.goobers.push(g);
+				console.log("Spawned red goober");
+					    
+			} else {
+				let g = game.add.existing(new GreenGoober(spawnx, spawny));
+				game.goobers.push(g);
+				console.log("Spawned green goober");
+			}
+		}
+		
 	}
 }
