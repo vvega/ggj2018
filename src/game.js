@@ -56,6 +56,12 @@ let debugMode = 1;
 			[game.panelMessages, game.gooberMessages] =[[],[]]// game.glyphMessageGen.generateInitialGlyphMessages();
 			game.elder = game.add.existing(new Elder(game.canvas.width/2, game.canvas.height - 155));
 			game.testGoober = game.add.existing(new GreenGoober(130, 220));
+
+			//TODO: populate goobers via spawn 
+			game.goobers = [game.add.existing(new RedGoober(130, 280)),
+						    game.add.existing(new GreenGoober(160, 100)),
+						    game.add.existing(new BaseGoober(200, 100))];
+
 			game.testWolf = game.add.existing(new Wolf(100, 100, game.testGoober));
 			
 			game.map.addMapObstructions(2, 3, 1);
