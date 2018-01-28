@@ -6,9 +6,11 @@ class Elder extends Phaser.Sprite {
         this.scale.setTo(.6);
         this.speed = 15;
 		this.signal = new Phaser.Signal();
-		this.game.rsignal.add((el) => {
-			//TODO: lets find another one?
-			this.targetGoober = undefined;
+		this.game.rsignal.add((msg, goober) => {
+			console.log(msg)
+			if(msg == "rescued" && this.targetGoober === goober) {
+				this.targetGoober = undefined;
+			}
 		});
 		this.selectedIndicator = game.add.existing(this._createSelectionIndicator());
 		this.selectedIndicator.visible = false;
@@ -49,6 +51,10 @@ class Elder extends Phaser.Sprite {
 	}
 
 	update() {
+		if(game.state.getCurrentState() instanceof EndState) {
+			this.selectedIndicator.visible = false;
+			return;
+		}
 		this._checkWithinBounds();
 		this._handleMoving();
 

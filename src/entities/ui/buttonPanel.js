@@ -39,14 +39,9 @@ class ButtonPanel extends Phaser.Image {
 
 	_onRescue(msg) {
 		if(msg=="rescued") {
-			console.log(this, "rescu")
 			let newCard = this.openSlots.pop();
-			newCard.resurface(game.glyphMessageGen.getNewGlyphMessage());
+			newCard && newCard.resurface(game.glyphMessageGen.getNewGlyphMessage());
 			console.log("resurfacing", newCard);
 		}
-	}
-
-	replaceInHand(button, glyphMessage) {
-		
 	}
 }

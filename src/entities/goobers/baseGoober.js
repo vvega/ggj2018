@@ -46,7 +46,14 @@ class BaseGoober extends Phaser.Sprite {
         if (this.message.glyphIDs.length != glyphMsg.glyphIDs.length) {
             // this should never happen
             console.log("GlyphMessage lengths not equal, which should never happen (ignoring)");
+            return;
         }
+
+        if(!this.alive) {
+            console.log("I'm dead/rescued already, dont care");
+            return;
+        }
+
         for(var i = 0; i < glyphMsg.glyphIDs.length; i++) {
             var mine = this.message.glyphIDs[i];
             var yours = glyphMsg.glyphIDs[i];
@@ -71,7 +78,7 @@ class BaseGoober extends Phaser.Sprite {
         rescueTween.start();
         this.message.destroy();
 
-        game.rsignal.dispatch("rescued");
+        game.rsignal.dispatch("rescued", this);
     }
 
     die() {
