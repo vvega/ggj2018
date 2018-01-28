@@ -12,13 +12,13 @@ class GlyphMessageGenerator {
 	generateInitialGlyphMessages() {
 		let msgArray = [];
 		for(let i = 0; i < this.baseMessageNumber; i++) {
-			msgArray.push(this.generateRandomGlyphMessage());
+			msgArray.push(this.getNewGlyphMessage());
 		}
 
-		return msgArray;
+		return [msgArray, msgArray.slice(0)];
 	}
 
-	generateRandomGlyphMessage() {
+	getNewGlyphMessage() {
 		return new GlyphMessage(0, 0, [new Glyph(0, 0, this._getRandomId(0)),
 									   new Glyph(0, 0, this._getRandomId(1)),
 									   new Glyph(0, 0, this._getRandomId(2))]);

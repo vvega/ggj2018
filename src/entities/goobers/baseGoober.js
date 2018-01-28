@@ -3,8 +3,15 @@ class BaseGoober extends Phaser.Sprite {
         super(game, x, y, game.atlasName, texture);
         this.anchor.setTo(.5);
         this.scale.setTo(.8);
+        this.vulnerable = true;
 
-        this.message = this.addChild(game.glyphMessages.shift() || GlyphMessageGenerator.generateRandomGlyphMessage());
+       /* if(game.gooberMessages.length) {
+            this.message = this.addChild(game.gooberMessages[0]);
+            game.gooberMessages.shift();
+        } else {*/
+            this.message = this.addChild(game.glyphMessageGen.getNewGlyphMessage());
+       // }
+        
         this.message.position.setTo(-120, -140)
 
         game.elder.signal.add(this._handleSpell, this);
@@ -52,7 +59,12 @@ class BaseGoober extends Phaser.Sprite {
         // give a new spell card to the Elder
         // animate rescue
         console.log("Goober rescued");
+        this.vulnerable = false;
+        this.moving = false;
+        let rescueTween = game.add.tween(this).to({ y: this.y - 50, alpha: 0}, 800, Phaser.Easing.Linear.InOut);
+        rescueTween.onComplete.add(this.kill, this);
+        rescueTween.start();
 
-        game.signal.dispatch("rescued");
+        game.rsignal.dispatch("rescued");
     }
 }

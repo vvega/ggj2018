@@ -6,6 +6,10 @@ class Elder extends Phaser.Sprite {
         this.scale.setTo(.6);
         this.speed = 15;
 		this.signal = new Phaser.Signal();
+		this.game.rsignal.add((el) => {
+			//TODO: lets find another one?
+			this.targetGoober = undefined;
+		});
     }
 
 	move(point) {
