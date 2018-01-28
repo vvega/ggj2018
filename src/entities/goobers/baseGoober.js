@@ -77,7 +77,7 @@ class BaseGoober extends Phaser.Sprite {
         rescueTween.onComplete.add(this.kill, this);
         rescueTween.start();
         this.message.destroy();
-
+        game.numRescued++;
         game.rsignal.dispatch("rescued", this);
     }
 
@@ -88,6 +88,7 @@ class BaseGoober extends Phaser.Sprite {
         deathTween.onComplete.add(() => {
             this.kill();
             this.message.destroy();
+            game.numDead++;
         });
         deathTween.start();
     }

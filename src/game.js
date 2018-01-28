@@ -69,8 +69,8 @@ let debugMode = 1;
 			game.map.addMapObstructions(2, 3, 1);
 
 			game.ui = game.add.existing(new GameUI(0, 0));
-
-			game.testGoober.alert();
+			game.numDead = 0;
+			game.numRescued = 0;
 
 			game.time.events.loop(Phaser.Timer.SECOND/3, () => {
 				game.world.sort("y", Phaser.Group.SORT_ASCENDING);
